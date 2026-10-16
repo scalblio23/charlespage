@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Medical Weight Loss | Keevo</title>
-  <meta name="description" content="See what clinician-backed medical weight loss options may suit your needs.">
+  <title>Porcelain Veneers Brisbane | Keevo</title>
+  <meta name="description" content="Thinking about porcelain veneers in Brisbane? Compare 3 veneer options for different smiles and budgets before you commit.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -22,6 +22,7 @@
   --teal-dark: #0d7f78;
   --teal-soft: #e3f4f2;
   --teal-tint: #c4e8e4;
+  --tick: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E");
 }
 
 html, body { margin: 0; }
@@ -41,6 +42,18 @@ body {
 }
 
 /* Hero */
+.eyebrow {
+  display: inline-block;
+  background: var(--teal-soft);
+  color: var(--teal-dark);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin: 0 0 16px;
+}
+
 .hero h1 {
   font-size: clamp(1.9rem, 5vw, 3rem);
   font-weight: 700;
@@ -60,8 +73,47 @@ body {
   font-size: 1.1rem;
   font-weight: 500;
   line-height: 1.5;
-  max-width: 560px;
+  max-width: 580px;
   margin: 20px auto 0;
+}
+
+.benefits {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 10px;
+  max-width: 640px;
+  margin: 26px auto 0;
+  padding: 0;
+}
+
+.benefits li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 7px 14px 7px 8px;
+  font-size: 0.84rem;
+  font-weight: 500;
+}
+
+.benefits li::before {
+  content: "";
+  flex: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--teal) var(--tick) center / 12px no-repeat;
+}
+
+.nudge {
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 24px 0 0;
 }
 
 /* Quiz */
@@ -182,7 +234,7 @@ body {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: var(--teal) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center / 12px no-repeat;
+  background: var(--teal) var(--tick) center / 12px no-repeat;
   opacity: 0;
   transform: scale(0.5);
   transition: opacity 0.2s ease, transform 0.2s ease;
@@ -283,20 +335,30 @@ footer {
   .subhead { font-size: 1rem; }
   .quiz { margin-top: 32px; }
   .hint { font-size: 0.92rem; margin-bottom: 20px; }
+  .benefits li { font-size: 0.8rem; }
 }
 </style>
 </head>
 <body>
   <main class="page">
     <header class="hero">
-      <h1>LOOKING FOR MEDICAL WEIGHT LOSS?</h1>
+      <p class="eyebrow">BRISBANE</p>
+      <h1>THINKING ABOUT GETTING PORCELAIN VENEERS?</h1>
       <p class="terms">T+C's Apply</p>
-      <p class="subhead">See what clinician-backed medical weight loss options may suit your needs.</p>
+      <p class="subhead">Want a straighter, whiter, more confident smile? Whether it's a subtle enhancement or a complete smile makeover, explore our 3 veneer options and find out which one could be right for you.</p>
+      <ul class="benefits">
+        <li>Multiple veneer packages to choose from</li>
+        <li>Natural-looking, beautiful smiles</li>
+        <li>Options for different budgets</li>
+        <li>Personalised treatment recommendations</li>
+        <li>Find out your options before committing</li>
+      </ul>
+      <p class="nudge">Don't spend thousands on veneers before comparing your options.</p>
     </header>
 
     <section class="quiz" aria-live="polite">
       <div class="progress">
-        <span id="step-label">QUESTION 1 OF 3</span>
+        <span id="step-label">QUESTION 1 OF 4</span>
         <div class="progress-track"><div class="progress-bar" id="progress-bar"></div></div>
       </div>
 
@@ -305,21 +367,21 @@ footer {
 
       <form class="step" data-step="contact" id="lead-form" novalidate>
         <h2>You're <strong>almost there</strong></h2>
-        <p class="hint">Where should we send your next steps?</p>
+        <p class="hint">Where should we send your veneer options?</p>
         <div class="fields">
           <label>First Name<input type="text" name="firstName" placeholder="Enter your first name" autocomplete="given-name" required></label>
           <label>Email Address<input type="email" name="email" placeholder="Enter your best email" autocomplete="email" required></label>
           <label>Phone Number<input type="tel" name="phone" placeholder="Enter your mobile number" autocomplete="tel" required></label>
           <p class="error" id="form-error" hidden>Please fill in all fields with valid details.</p>
         </div>
-        <button type="submit" class="next">See My Options &rarr;</button>
+        <button type="submit" class="next">See My Veneer Options &rarr;</button>
         <p class="privacy">Your details are kept private and only used to help with your enquiry.</p>
         <button type="button" class="back">&larr; Back</button>
       </form>
 
       <div class="step" data-step="done">
         <h2>Thanks, <strong>you're all set!</strong></h2>
-        <p class="hint">A member of our team will be in touch shortly to talk through your options.</p>
+        <p class="hint">A member of our team will be in touch shortly to walk you through your 3 veneer options.</p>
       </div>
     </section>
 
@@ -329,58 +391,59 @@ footer {
   <script>
 (function () {
   // Line icons: `fill` is the offset soft highlight, `stroke` is the line art (colours set in styles.css).
+  const TOOTH = 'M30 16 C20 16 14 26 16 38 C18 50 24 56 26 70 C28 82 30 88 35 88 C41 88 42 72 50 72 C58 72 59 88 65 88 C70 88 72 82 74 70 C76 56 82 50 84 38 C86 26 80 16 70 16 C62 16 58 22 50 22 C42 22 38 16 30 16 Z';
   const ICONS = {
-    scale: {
-      fill: '<rect x="18" y="22" width="60" height="56" rx="10"/>',
-      stroke: '<rect x="18" y="22" width="60" height="56" rx="10"/><path d="M34 44 A14 14 0 0 1 62 44 Z"/><path d="M48 44 L54 34"/><path d="M28 78 v5 M68 78 v5"/>',
+    sparkle: {
+      fill: '<path d="M46 14 C49 38 58 47 82 50 C58 53 49 62 46 86 C43 62 34 53 10 50 C34 47 43 38 46 14 Z"/>',
+      stroke: '<path d="M46 14 C49 38 58 47 82 50 C58 53 49 62 46 86 C43 62 34 53 10 50 C34 47 43 38 46 14 Z"/><path d="M80 10 V26 M72 18 H88"/>',
     },
-    bolt: {
-      fill: '<path d="M56 14 L28 54 H48 L42 86 L72 42 H52 Z"/>',
-      stroke: '<path d="M56 14 L28 54 H48 L42 86 L72 42 H52 Z"/>',
+    align: {
+      fill: '<rect x="12" y="24" width="22" height="44" rx="8"/><rect x="66" y="24" width="22" height="44" rx="8"/>',
+      stroke: '<rect x="12" y="24" width="22" height="44" rx="8"/><rect x="39" y="24" width="22" height="44" rx="8"/><rect x="66" y="24" width="22" height="44" rx="8"/><path d="M10 82 H90"/>',
     },
-    molecule: {
-      fill: '<circle cx="50" cy="28" r="11"/><circle cx="74" cy="68" r="11"/>',
-      stroke: '<circle cx="50" cy="28" r="11"/><circle cx="26" cy="68" r="11"/><circle cx="74" cy="68" r="11"/><path d="M44 38 L32 58 M56 38 L68 58 M37 68 H63"/>',
+    chip: {
+      fill: `<path d="${TOOTH}"/>`,
+      stroke: `<path d="${TOOTH}"/><path d="M42 30 L52 40 L45 50 L54 58"/>`,
     },
-    dumbbell: {
-      fill: '<rect x="18" y="32" width="12" height="36" rx="3"/><rect x="70" y="32" width="12" height="36" rx="3"/>',
-      stroke: '<path d="M30 50 H70"/><rect x="18" y="32" width="12" height="36" rx="3"/><rect x="70" y="32" width="12" height="36" rx="3"/><rect x="9" y="40" width="9" height="20" rx="2"/><rect x="82" y="40" width="9" height="20" rx="2"/>',
+    gap: {
+      fill: '<rect x="12" y="20" width="28" height="56" rx="10"/><rect x="60" y="20" width="28" height="56" rx="10"/>',
+      stroke: '<rect x="12" y="20" width="28" height="56" rx="10"/><rect x="60" y="20" width="28" height="56" rx="10"/><path d="M46 48 H54"/><path d="M20 88 H80"/>',
     },
-    heart: {
-      fill: '<path d="M50 82 C20 62 12 46 20 32 C28 18 46 20 50 34 C54 20 72 18 80 32 C88 46 80 62 50 82 Z"/>',
-      stroke: '<path d="M50 82 C20 62 12 46 20 32 C28 18 46 20 50 34 C54 20 72 18 80 32 C88 46 80 62 50 82 Z"/><path d="M30 38 C31 33 34 30 38 29"/>',
+    tooth: {
+      fill: `<path d="${TOOTH}"/>`,
+      stroke: `<path d="${TOOTH}"/><path d="M28 32 C30 27 34 25 38 25"/>`,
     },
-    sprout: {
-      fill: '<path d="M50 48 C50 30 62 18 80 18 C80 36 68 48 50 48 Z"/>',
-      stroke: '<path d="M50 86 V46"/><path d="M50 60 C34 60 22 50 22 34 C38 34 50 44 50 60 Z"/><path d="M50 48 C50 30 62 18 80 18 C80 36 68 48 50 48 Z"/><path d="M32 86 H68"/>',
+    star: {
+      fill: '<path d="M50 12 L61 37 L88 39 L67 57 L74 84 L50 69 L26 84 L33 57 L12 39 L39 37 Z"/>',
+      stroke: '<path d="M50 12 L61 37 L88 39 L67 57 L74 84 L50 69 L26 84 L33 57 L12 39 L39 37 Z"/>',
     },
     smile: {
       fill: '<circle cx="46" cy="54" r="28"/>',
       stroke: '<circle cx="46" cy="54" r="28"/><path d="M36 47 v3 M56 47 v3"/><path d="M34 62 Q46 74 58 62"/><path d="M82 10 V28 M73 19 H91"/>',
     },
-    sun: {
-      fill: '<circle cx="50" cy="50" r="17"/>',
-      stroke: '<circle cx="50" cy="50" r="17"/><path d="M50 14 V24 M50 76 V86 M14 50 H24 M76 50 H86 M25 25 L32 32 M68 68 L75 75 M25 75 L32 68 M68 32 L75 25"/>',
+    wallet: {
+      fill: '<rect x="14" y="30" width="72" height="52" rx="8"/>',
+      stroke: '<rect x="14" y="30" width="72" height="52" rx="8"/><path d="M22 30 L62 16 L68 30"/><rect x="62" y="48" width="24" height="16" rx="4"/><path d="M71 56 h.01" stroke-width="6"/>',
     },
-    stopwatch: {
-      fill: '<circle cx="50" cy="56" r="28"/>',
-      stroke: '<circle cx="50" cy="56" r="28"/><path d="M42 16 H58 M50 16 V28"/><path d="M50 56 L61 43"/><path d="M73 30 L79 24"/><path d="M50 36 v4 M70 56 h-4 M50 76 v-4 M30 56 h4"/>',
-    },
-    pulse: {
-      fill: '<path d="M50 82 C20 62 12 46 20 32 C28 18 46 20 50 34 C54 20 72 18 80 32 C88 46 80 62 50 82 Z"/>',
-      stroke: '<path d="M50 82 C20 62 12 46 20 32 C28 18 46 20 50 34 C54 20 72 18 80 32 C88 46 80 62 50 82 Z"/><path d="M8 52 H34 L40 42 L48 62 L55 48 L60 52 H92"/>',
-    },
-    shield: {
-      fill: '<path d="M50 12 L80 23 V47 C80 66 68 78 50 88 C32 78 20 66 20 47 V23 Z"/>',
-      stroke: '<path d="M50 12 L80 23 V47 C80 66 68 78 50 88 C32 78 20 66 20 47 V23 Z"/><path d="M36 50 L46 60 L65 40"/>',
-    },
-    stethoscope: {
-      fill: '<circle cx="76" cy="52" r="10"/>',
-      stroke: '<path d="M28 14 V36 C28 50 36 58 46 58 C56 58 64 50 64 36 V14"/><path d="M23 14 H33 M59 14 H69"/><path d="M46 58 V70 C46 80 54 86 62 86 C70 86 76 80 76 72 V62"/><circle cx="76" cy="52" r="10"/><circle cx="76" cy="52" r="3"/>',
+    sprout: {
+      fill: '<path d="M50 48 C50 30 62 18 80 18 C80 36 68 48 50 48 Z"/>',
+      stroke: '<path d="M50 86 V46"/><path d="M50 60 C34 60 22 50 22 34 C38 34 50 44 50 60 Z"/><path d="M50 48 C50 30 62 18 80 18 C80 36 68 48 50 48 Z"/><path d="M32 86 H68"/>',
     },
     chat: {
       fill: '<path d="M16 18 H58 A6 6 0 0 1 64 24 V48 A6 6 0 0 1 58 54 H32 L22 64 V54 H16 A6 6 0 0 1 10 48 V24 A6 6 0 0 1 16 18 Z"/>',
       stroke: '<path d="M16 18 H58 A6 6 0 0 1 64 24 V48 A6 6 0 0 1 58 54 H32 L22 64 V54 H16 A6 6 0 0 1 10 48 V24 A6 6 0 0 1 16 18 Z"/><path d="M72 38 H84 A6 6 0 0 1 90 44 V68 A6 6 0 0 1 84 74 H80 V84 L70 74 H48 A6 6 0 0 1 42 68 V62"/><path d="M26 36 h.01 M37 36 h.01 M48 36 h.01" stroke-width="6"/>',
+    },
+    balance: {
+      fill: '<path d="M20 30 L10 54 H30 Z M80 30 L70 54 H90 Z"/>',
+      stroke: '<path d="M50 14 V82 M32 84 H68 M20 26 H80"/><path d="M20 30 L10 54 H30 Z M80 30 L70 54 H90 Z"/>',
+    },
+    bolt: {
+      fill: '<path d="M56 14 L28 54 H48 L42 86 L72 42 H52 Z"/>',
+      stroke: '<path d="M56 14 L28 54 H48 L42 86 L72 42 H52 Z"/>',
+    },
+    calendar: {
+      fill: '<rect x="16" y="22" width="68" height="62" rx="8"/>',
+      stroke: '<rect x="16" y="22" width="68" height="62" rx="8"/><path d="M16 40 H84 M34 14 V28 M66 14 V28"/><path d="M38 62 L46 70 L62 52"/>',
     },
     bulb: {
       fill: '<path d="M50 12 C34 12 24 24 24 38 C24 50 32 56 36 66 H64 C68 56 76 50 76 38 C76 24 66 12 50 12 Z"/>',
@@ -390,35 +453,43 @@ footer {
 
   const QUESTIONS = [
     {
-      name: 'improve',
-      title: 'What would you most like to <strong>improve right now?</strong>',
+      name: 'concern',
+      title: 'What would you most like to <strong>change about your smile?</strong>',
       options: [
-        ['Lose weight & feel more confident', 'scale'],
-        ['Improve energy & metabolism', 'bolt'],
-        ['Optimise hormones', 'molecule'],
-        ['Build muscle & recover faster', 'dumbbell'],
-        ['Improve sexual health & libido', 'heart'],
-        ['Healthy ageing & overall wellbeing', 'sprout'],
+        ['Whiter, brighter teeth', 'sparkle'],
+        ['Straighter-looking teeth', 'align'],
+        ['Chipped or worn teeth', 'chip'],
+        ['Gaps between my teeth', 'gap'],
+        ['Uneven or misshapen teeth', 'tooth'],
+        ['A complete smile makeover', 'star'],
       ],
     },
     {
       name: 'result',
-      title: 'What result would make the <strong>biggest difference</strong> to you?',
+      title: 'What kind of result are you <strong>looking for?</strong>',
       options: [
-        ['Look and feel better', 'smile'],
-        ['Have more energy every day', 'sun'],
-        ['Improve my performance & recovery', 'stopwatch'],
-        ['Get my health back on track', 'pulse'],
-        ['Optimise my long-term health', 'shield'],
+        ['A subtle smile enhancement', 'smile'],
+        ['A natural-looking refresh', 'tooth'],
+        ['A complete smile makeover', 'star'],
       ],
     },
     {
-      name: 'approach',
-      title: 'How would you prefer to <strong>approach it?</strong>',
+      name: 'priority',
+      title: 'What matters most to you when <strong>choosing veneers?</strong>',
       options: [
-        ['Explore clinician-supervised treatment options', 'stethoscope'],
-        ['Get professional advice on my options', 'chat'],
-        ["I’m not sure yet — I’d like to learn more", 'bulb'],
+        ['Finding an option that suits my budget', 'wallet'],
+        ['Natural-looking results', 'sprout'],
+        ['A personalised recommendation', 'chat'],
+        ['Comparing options before committing', 'balance'],
+      ],
+    },
+    {
+      name: 'timing',
+      title: 'When are you hoping to <strong>get started?</strong>',
+      options: [
+        ['As soon as possible', 'bolt'],
+        ['In the next 1–3 months', 'calendar'],
+        ["I’m just researching my options", 'bulb'],
       ],
     },
   ];
